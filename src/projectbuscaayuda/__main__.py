@@ -13,6 +13,8 @@ if __name__ == '__main__':
     #crear persona
     persona1 = Persona(nombre = "Manuel", apellido = "Quintana", foto = "en proceso", telefono = "941952366", correo="manuelquintana55@gmail.com")
     persona2 = Persona(nombre = "Juan", apellido = "Castro Sotomayor", foto = "en proceso", telefono = "923955526", correo="soto.mayor.1@gmail.com")
+    persona3 = Persona(nombre = "Marcos", apellido = "Contreras Lopez", foto = "en proceso", telefono = "943221121", correo="marcos111@gmail.com")
+
     session.add(persona1)
     session.add(persona2)
     session.commit()
