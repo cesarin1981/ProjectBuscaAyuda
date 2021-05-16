@@ -7,7 +7,7 @@ from .declarative_base import Base
 class Persona(Base):
     __tablename__ = 'persona'
 
-    id = Column(Integer, primary_key=true)
+    id = Column(Integer, primary_key=True)
 
     nombre = Column(String)
     apellido = Column(String)
@@ -20,6 +20,6 @@ class Persona(Base):
 class Servicio_Persona(Base):
     __tablename__ = 'servicio_persona'
 
-    persona_id = Column(Integer, foreignkey('persona.id'), primary_key=true)
-    servicio_id = Column(Integer, foreignkey('servicio.id'), primary_key=true)
+    persona_id = Column(Integer, ForeignKey('persona.id'), primary_key=True)
+    servicio_id = Column(Integer, ForeignKey('servicio.id'), primary_key=True)
     year_experiencia = Column(Integer)

@@ -23,7 +23,7 @@ class Categoria_Servicio(enum.Enum):
 class Servicio(Base):
     __tablename__ = 'servicio'
 
-    id = Column(Integer, primary_key=true)
+    id = Column(Integer, primary_key=True)
     descripcion = Column(String)
     categoria_servicio = Column(Enum(Categoria_Servicio))
     personas = relationship('Persona', secondary = 'servicio_persona')
