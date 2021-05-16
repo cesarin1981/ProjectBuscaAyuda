@@ -1,7 +1,7 @@
 
 
 
-# **Proyecto Busca Ayuda**
+# **Proyecto Busco Ayuda**
 
 ## **Descripción**
 El presente proyecto tiene la finalidad de permitir el registro de las personas independientes con oficios de atraves de un portal poner a disposición al publico los servicios que brindan, detallando los años de experiencia y que servicio realizan la cual se observará mediante una galeria que enlistará las categorias de servicios y cada una de estas permitirá visualizar a las personas que ofrecen el servicio seleccionado.
