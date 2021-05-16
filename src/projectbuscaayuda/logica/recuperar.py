@@ -6,6 +6,7 @@ if __name__ == '__main__':
     session = Session()
     personas = session.query(Persona).all()
     print('Las personas que brindan servicios almacenadas son:')
+    print("")
     for persona in personas:
         print("Apellidos y nombres: " + persona.apellido + " " + persona.nombre)
 
@@ -15,5 +16,4 @@ if __name__ == '__main__':
 
         print("---------------------------")
         print("")
-
-        session.close()
+    session.close()

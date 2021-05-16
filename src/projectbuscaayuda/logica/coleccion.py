@@ -34,6 +34,13 @@ class Coleccion():
     def ver_servicios(self):
         return session.query(Servicio).__dict__
 
+    def eliminar_servicio(self, servicio_id):
+
+        servicio_eliminar = session.query(Servicio).get(servicio_id)
+        session.delete(servicio_eliminar)
+        session.commit()
+        session.close()
+        return session.query(Servicio).__dict__
 
     def registrar_persona(self, nombre, apellido, foto, telefono, correo):
         busqueda = session.query(Persona).filter(Persona.nombre == nombre, Persona.apellido == apellido).all()
@@ -64,4 +71,12 @@ class Coleccion():
         return session.query(Persona).get(persona_id).__dict__
 
     def ver_personas(self):
+        return session.query(Persona).__dict__
+
+    def eliminar_persona(self, persona_id):
+
+        persona_eliminar = session.query(Persona).get(persona_id)
+        session.delete(persona_eliminar)
+        session.commit()
+        session.close()
         return session.query(Persona).__dict__
