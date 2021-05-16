@@ -2,7 +2,11 @@ from src.projectbuscaayuda.modelo.persona import Persona
 from src.projectbuscaayuda.modelo.servicio import Servicio, Categoria_Servicio
 from src.projectbuscaayuda.modelo.declarative_base import Session, engine, Base
 
+
+
 if __name__ == '__main__':
+
+    Base.metadata.drop_all(engine)
 
     Base.metadata.create_all(engine)
 
@@ -24,6 +28,8 @@ if __name__ == '__main__':
 
     servicio1.persona = [persona1]
     servicio2.persona = [persona2, persona3]
+    session.commit()
+
 
     session.commit()
     session.close()

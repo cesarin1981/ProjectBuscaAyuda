@@ -20,6 +20,6 @@ class Persona(Base):
 class Servicio_Persona(Base):
     __tablename__ = 'servicio_persona'
 
-    persona_id = Column(Integer, ForeignKey('persona.id'), primary_key=True)
-    servicio_id = Column(Integer, ForeignKey('servicio.id'), primary_key=True)
+    persona = Column(Integer, ForeignKey('persona.id'), primary_key=True)
+    servicio = Column(Integer, ForeignKey('servicio.id'), primary_key=True)
     year_experiencia = Column(Integer)
